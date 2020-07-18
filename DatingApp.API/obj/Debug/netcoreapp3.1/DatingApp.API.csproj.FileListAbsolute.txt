@@ -52,3 +52,11 @@ F:\MyApplication\DatingApplication\DatingApp.API\obj\Debug\netcoreapp3.1\staticw
 F:\MyApplication\DatingApplication\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.dll
 F:\MyApplication\DatingApplication\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.pdb
 F:\MyApplication\DatingApplication\DatingApp.API\obj\Debug\netcoreapp3.1\DatingApp.API.genruntimeconfig.cache
+F:\MyApplication\DatingApplication\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\MyApplication\DatingApplication\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\MyApplication\DatingApplication\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\MyApplication\DatingApplication\DatingApp.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\MyApplication\DatingApplication\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\MyApplication\DatingApplication\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\MyApplication\DatingApplication\DatingApp.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\MyApplication\DatingApplication\DatingApp.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
