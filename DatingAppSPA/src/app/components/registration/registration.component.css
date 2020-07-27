@@ -1,0 +1,20 @@
+.flex-box{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mt-5{
+    margin-top: 15px;
+}
+.d-flex{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.full-width{
+    width: 100%;
+}
+.darken-3{
+    color:#fff;
+}

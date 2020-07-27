@@ -5684,11 +5684,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\MyApplication\\DatingApplication\\DatingApp.API\\DatingApp.API.csproj",
+      "projectUniqueName": "F:\\MyApplication\\DatingApplication\\DatingApp.API\\DatingApp.API.csproj",
       "projectName": "DatingApp.API",
-      "projectPath": "f:\\MyApplication\\DatingApplication\\DatingApp.API\\DatingApp.API.csproj",
+      "projectPath": "F:\\MyApplication\\DatingApplication\\DatingApp.API\\DatingApp.API.csproj",
       "packagesPath": "C:\\Users\\Mohamed Beshri Amer\\.nuget\\packages\\",
-      "outputPath": "f:\\MyApplication\\DatingApplication\\DatingApp.API\\obj\\",
+      "outputPath": "F:\\MyApplication\\DatingApplication\\DatingApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5771,7 +5771,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

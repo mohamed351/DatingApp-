@@ -1,0 +1,20 @@
+.full-width{
+    width: 100%;
+}
+.mt-5{
+ margin-top: 15px;
+}
+.flex-box{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+ 
+}
+.center-image{
+    display: block;
+}
+.d-flex{
+    display: flex;
+    justify-content: center; 
+}

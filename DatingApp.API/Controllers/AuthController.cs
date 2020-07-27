@@ -29,7 +29,15 @@ namespace DatingApp.API.Controllers
             if (await this.authRepository.IsExist(dto.UserName))
                 return BadRequest("The User is Exist");
             var User = await this.authRepository.Registration(dto.UserName, dto.Email, dto.Name, dto.Password);
-            return StatusCode(201);
+            JwtSecurityTokenHandler handler;
+            SecurityToken token;
+            JwtGenerator(User, out handler, out token);
+            return Ok(new
+            {
+                Token = handler.WriteToken(token),
+                ExpireDate = token.ValidTo
+
+            });
         }
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO dto)
@@ -38,21 +46,9 @@ namespace DatingApp.API.Controllers
             if (user == null)
                 return Unauthorized();
 
-
-            var claims = new Claim[]{
-                new Claim(ClaimTypes.NameIdentifier,user.ID),
-                new Claim(ClaimTypes.Name,user.UserName)
-        };
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("AppSettings:Token").Value));
-            var signIncreds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
-            var descrptor = new SecurityTokenDescriptor()
-            {
-                Subject = new ClaimsIdentity(claims),
-                SigningCredentials = signIncreds,
-                Expires = DateTime.Now.AddDays(2)
-            };
-            var handler = new JwtSecurityTokenHandler();
-            var token = handler.CreateToken(descrptor);
+            JwtSecurityTokenHandler handler;
+            SecurityToken token;
+            JwtGenerator(user, out handler, out token);
 
             return Ok(new
             {
@@ -65,9 +61,23 @@ namespace DatingApp.API.Controllers
 
         }
 
-
-
-
-
+        private void JwtGenerator(Models.User user, out JwtSecurityTokenHandler handler, out SecurityToken token)
+        {
+            var claims = new Claim[]{
+                new Claim(ClaimTypes.NameIdentifier,user.ID),
+                new Claim(ClaimTypes.Name,user.UserName),
+                new Claim(ClaimTypes.Surname , user.Name)
+        };
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetSection("AppSettings:Token").Value));
+            var signIncreds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512);
+            var descrptor = new SecurityTokenDescriptor()
+            {
+                Subject = new ClaimsIdentity(claims),
+                SigningCredentials = signIncreds,
+                Expires = DateTime.Now.AddDays(2)
+            };
+            handler = new JwtSecurityTokenHandler();
+            token = handler.CreateToken(descrptor);
+        }
     }
 }

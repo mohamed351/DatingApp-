@@ -1,0 +1,28 @@
+<header>
+
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo padding-left-2">
+      <img width="60" src="../../../assets/logo.png"/>
+    </a>
+    <ng-container *ngIf="auth.IsAuthicated() then login else notlogin">
+
+    </ng-container>
+  </div>
+</nav>
+</header>
+
+<ng-template #login>
+  <ul class="right hide-on-med-and-down">
+    <li><a routerLink="/login">Hello </a></li>
+    <li><a  routerLink="/register">Registration</a></li>     
+  </ul>
+</ng-template>
+
+<ng-template #notlogin>
+  <ul class="right hide-on-med-and-down">
+    <li><a routerLink="/login">login</a></li>
+    <li><a  routerLink="/register">Registration</a></li>     
+  </ul>
+</ng-template>

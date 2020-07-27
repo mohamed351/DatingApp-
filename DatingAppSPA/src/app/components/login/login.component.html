@@ -1,0 +1,25 @@
+
+
+<div class="container margin-top-15">
+<div class="flex-box">
+    <div class="col s6 center-form">
+        <div class="d-flex">
+       <img class="center-image" src="../../../assets/logo.png">
+    </div>
+    <form #form="ngForm" (ngSubmit)="SubmitData(form)">
+       <div>
+   
+        <input type="text" required placeholder="UserName" name="userName"  ngModel #userName="ngModel" />
+        
+        <input type="password" required placeholder="Password" name="password" ngModel #password="ngModel"/>
+   
+    </div>
+    <div class="d-flex mt-5">
+        <button class=" btn-large full-width red darken-2" [disabled]="form.invalid"><i class="material-icons left">login</i>Login</button>
+    </div>
+</form>
+    </div>
+    
+</div>
+
+  </div>
